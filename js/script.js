@@ -1,5 +1,6 @@
 const input = document.getElementById("search-input");
 const mealItems = document.getElementById("item-panel");
+const contentDetails = document.getElementById('meal-details')
 const row = document.getElementById("row");
 const button = document.getElementById("button");
 // button event handler
@@ -29,7 +30,7 @@ function eventWork() {
         });
         row.classList.remove("wrongMsg");
       } else {
-        allItem = `Sorry, we didn't match your meal!`;
+        allItem = `Sorry, We Didn't Match Your Meal!`;
         row.classList.add("wrongMsg");
       }
       if (input.value === "") {
@@ -60,10 +61,10 @@ function getMealId(mealId) {
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.meals[0]);
       const meal = data.meals[0];
       mealDetailsContent(meal);
-      mealItems.style.display = 'none';
+      mealItems.style.display='none';
+      contentDetails.style.display='block'
     });
 }
 
@@ -89,9 +90,15 @@ function mealDetailsContent(meal) {
           <ul id="ingradients">
           ${strIngredient.map(ingradient=>`<li><span><i class="fas fa-check-square"></i></span> ${ingradient}</li>`).join(' ')}
           </ul>
+          <button id="btn">Back To Home</button>
       </div>
   </div>
   `
   document.getElementById("meal-details").innerHTML = mealDetails;
-}
+  const btn = document.getElementById('btn')
+btn.addEventListener('click', ()=>{
+  contentDetails.style.display = 'none';
+  mealItems.style.display='block';
 
+})
+}
