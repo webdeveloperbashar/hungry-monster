@@ -125,3 +125,24 @@ div#meal-contents img {
 #ingradients li span i{
     color: #F06C4E;
 }
+#meal-details{
+    display: none;
+}
+#item-panel{
+    display: block;
+}
+#btn {
+    border: none;
+    padding: 13px;
+    float: right;
+    margin-top: -70px;
+    font-size: 16px;
+    background: #F06C4E;
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+#btn:focus{
+    outline: none;
+}
