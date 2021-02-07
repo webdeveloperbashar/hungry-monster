@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hungry Monster</title>
+    <!--custom css link-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Bootstrap css link-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--Font awesome-->
+    <script
+      src="https://kit.fontawesome.com/686509c997.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img src="./logo/logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="javascript:void(0);">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Meal items section-->
+    <section id="meal-section">
+      <div class="container">
+        <!--meal search input field-->
+        <div id="item-panel">
+          <div class="row mt-4">
+            <div class="col-md-6 m-auto">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search For Meal..."
+                class="float-start"
+              />
+              <button id="button" class="float-start">Search</button>
+            </div>
+          </div>
+          <!--meal items-->
+          <div id="meal-items">
+            <div class="row mt-5" id="row"></div>
+          </div>
+        </div>
+        <div id="meal-details"></div>
+      </div>
+    </section>
+    <!--custom js link-->
+    <script src="js/script.js"></script>
+    <!--Bootstrap js link-->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
